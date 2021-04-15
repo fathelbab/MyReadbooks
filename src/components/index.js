@@ -1,5 +1,6 @@
-// Following best practice by importing all components into index.js
-
 import BookComponent from './BookComponent'
+import BookShelfComponent from './BookShelfComponent'
 
-export {BookComponent}
+
+
+export {BookComponent, BookShelfComponent}

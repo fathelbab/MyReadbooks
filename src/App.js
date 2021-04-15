@@ -1,7 +1,7 @@
 import React from 'react'
+import {BookShelfComponent} from "./components/index"
 // import * as BooksAPI from './BooksAPI'
 import './App.css'
-import {BookComponent} from './components/index.js'
 class BooksApp extends React.Component {
   state = {
     /**
@@ -47,63 +47,10 @@ class BooksApp extends React.Component {
               <h1>MyReads</h1>
             </div>
             <div className="list-books-content">
-              <div>
-                <div className="bookshelf">
-                  <h2 className="bookshelf-title">Currently Reading</h2>
-                  <div className="bookshelf-books">
-                    <ol className="books-grid">
-                      <li>
-                       // add book component
-                       <BookComponent/>
-                      </li>
-                      <li>
-                        //add book component
-                        <BookComponent/>
+            <BookShelfComponent/>
+            <BookShelfComponent/>
+            <BookShelfComponent/>
 
-                      </li>
-                    </ol>
-                  </div>
-                </div>
-                <div className="bookshelf">
-                  <h2 className="bookshelf-title">Want to Read</h2>
-                  <div className="bookshelf-books">
-                    <ol className="books-grid">
-                      <li>
-                       // add book component
-                       <BookComponent/>
-
-                      </li>
-                      <li>
-                        // add book component
-                        <BookComponent/>
-
-                      </li>
-                    </ol>
-                  </div>
-                </div>
-                <div className="bookshelf">
-                  <h2 className="bookshelf-title">Read</h2>
-                  <div className="bookshelf-books">
-                    <ol className="books-grid">
-                      <li>
-                       // add book component
-                       <BookComponent/>
-
-                      </li>
-                      <li>
-                       // add book component
-                       <BookComponent/>
-
-                      </li>
-                      <li>
-                        // add book component
-                        <BookComponent/>
-
-                      </li>
-                    </ol>
-                  </div>
-                </div>
-              </div>
             </div>
             <div className="open-search">
               <button onClick={() => this.setState({ showSearchPage: true })}>
