@@ -7639,7 +7639,7 @@
   "resolved" "https://registry.npmjs.org/preserve/-/preserve-0.2.0.tgz"
   "version" "0.2.0"
 
-"prettier@^1.14.2":
+"prettier@^1.14.2", "prettier@^1.15.2":
   "integrity" "sha512-YgPLFFA0CdKL4Eg2IHtUSjzj/BWgszDHiNQAe0VAIBse34148whfdzLagRL+QiKS+YfK5ftB6X4v/MBw8yCoug=="
   "resolved" "https://registry.npmjs.org/prettier/-/prettier-1.15.2.tgz"
   "version" "1.15.2"
