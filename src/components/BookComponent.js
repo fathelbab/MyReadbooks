@@ -1,7 +1,7 @@
 import React from 'react'
 
 const BookComponent = ({ book, updateShelf }) => {
-  const { title, authors, imageLinks, shelf } = book
+  const { BookTitle, BookAuthors, imageLinks, shelf } = book
   const thumbnail =
     imageLinks && imageLinks.thumbnail
       ? imageLinks.thumbnail
@@ -36,8 +36,8 @@ const BookComponent = ({ book, updateShelf }) => {
           </select>
         </div>
       </div>
-      <div className="book-title">{title}</div>
-      <div className="book-authors">{authors && authors.join(',')}</div>
+      <div className="book-title">{BookTitle}</div>
+      <div className="book-authors">{BookAuthors && BookAuthors.join(',')}</div>
     </div>
   )
 }

@@ -13,14 +13,16 @@ class SearchPage extends Component {
 
 
   searchHandling = event => {
+    
     const query = event.target.value.trim()
+    if (query.length > 0) {
     search(query).then(response => {
 
       if (response && 'error' in response) {
         console.log('No books with thi name')
       } else {
         this.setState(prevState => ({
-          books: response.map(book => {
+                   books: response.map(book => {
             if (!('shelf' in book)) {
               book.shelf = 'none'
             }
@@ -35,6 +37,10 @@ class SearchPage extends Component {
         }))
       }
     })
+  }
+  else {
+    this.setState({books: []})
+  }
   }
 
   render() {

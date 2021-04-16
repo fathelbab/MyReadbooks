@@ -7,7 +7,10 @@ import {
 } from 'react-router-dom'
 
 import './App.css'
-import { SearchPage, MyBookList, PageNotFound404 } from './pages/index'
+// Imported Routes
+import { SearchPage, MyBookList, PageNotFound404 } from './routes/index'
+
+// imported API's
 import { getAll, update } from './utils/BooksAPI'
 
 class BooksApp extends React.Component {
@@ -38,6 +41,7 @@ class BooksApp extends React.Component {
     return (
       <Router>
         <Switch>
+          
           <Route
             path="/"
             exact
@@ -54,6 +58,7 @@ class BooksApp extends React.Component {
           />
           <Route path="/404" exact component={PageNotFound404} />
           <Redirect to="/404" />
+
         </Switch>
       </Router>
     )
