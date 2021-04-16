@@ -1,19 +1,14 @@
 import React from 'react'
 import BookComponent from './BookComponent'
-const BookShelfComponent = () => {
+const BookShelfComponent = ({title, books, updateShelf}) => {
   return (
     <div className="bookshelf">
-      <h2 className="bookshelf-title">Currently Reading</h2>
+      <h2 className="bookshelf-title">{title}</h2>
       <div className="bookshelf-books">
         <ol className="books-grid">
-          <li>
-            // add book component
-            <BookComponent />
-          </li>
-          <li>
-            //add book component
-            <BookComponent />
-          </li>
+          {books.map(book => (
+              <BookComponent book={book} key={book.id} updateShelf={updateShelf}/>
+          ))}
         </ol>
       </div>
     </div>
