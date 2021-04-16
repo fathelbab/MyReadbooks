@@ -19,9 +19,10 @@ class SearchPage extends Component {
     search(query).then(response => {
 
       if (response && 'error' in response) {
-        console.log('No books with thi name')
+        alert('No books with this name')
+        this.setState({books:[]})
       } else {
-        this.setState(prevState => ({
+        this.setState( () => ({
                    books: response.map(book => {
             if (!('shelf' in book)) {
               book.shelf = 'none'
@@ -38,7 +39,7 @@ class SearchPage extends Component {
       }
     })
   }
-  else {
+  else if (query.length === 0){
     this.setState({books: []})
   }
   }
