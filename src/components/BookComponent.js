@@ -1,8 +1,11 @@
 import React from 'react'
 
-const BookComponent = ({book, updateShelf}) => {
-    const {title, authors, imageLinks, shelf} = book
-    const thumbnail = imageLinks && imageLinks.thumbnail ? imageLinks.thumbnail : 'url("http://books.google.com/books/content?id=PGR2AwAAQBAJ&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE73-GnPVEyb7MOCxDzOYF1PTQRuf6nCss9LMNOSWBpxBrz8Pm2_mFtWMMg_Y1dx92HT7cUoQBeSWjs3oEztBVhUeDFQX6-tWlWz1-feexS0mlJPjotcwFqAg6hBYDXuK_bkyHD-y&source=gbs_api")'
+const BookComponent = ({ book, updateShelf }) => {
+  const { title, authors, imageLinks, shelf } = book
+  const thumbnail =
+    imageLinks && imageLinks.thumbnail
+      ? imageLinks.thumbnail
+      : 'url("http://books.google.com/books/content?id=PGR2AwAAQBAJ&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE73-GnPVEyb7MOCxDzOYF1PTQRuf6nCss9LMNOSWBpxBrz8Pm2_mFtWMMg_Y1dx92HT7cUoQBeSWjs3oEztBVhUeDFQX6-tWlWz1-feexS0mlJPjotcwFqAg6hBYDXuK_bkyHD-y&source=gbs_api")'
   return (
     <div className="book">
       <div className="book-top">
@@ -15,11 +18,14 @@ const BookComponent = ({book, updateShelf}) => {
           }}
         />
         <div className="book-shelf-changer">
-          <select value={shelf} onChange={(event) => {
-const targetShelf = event.target.value
-updateShelf(book, targetShelf)
-console.log(book, targetShelf)
-}}>
+          <select
+            value={shelf}
+            onChange={event => {
+              const targetShelf = event.target.value
+              updateShelf(book, targetShelf)
+              console.log(book, targetShelf)
+            }}
+          >
             <option value="move" disabled>
               Move to...
             </option>
