@@ -14,17 +14,17 @@ const MyBookList = ({ books, updateShelf }) => {
         {books.length > 0 && (
           <div>
             <BookShelfComponent
-              BookShelfTitle={'Currently Reading'}
+              title={'Currently Reading'}
               books={books.filter(book => book.shelf === 'currentlyReading')}
               updateShelf={updateShelf}
             />
             <BookShelfComponent
-              BookShelfTitle={'Want to read'}
+              title={'Want to read'}
               books={books.filter(book => book.shelf === 'wantToRead')}
               updateShelf={updateShelf}
             />
             <BookShelfComponent
-              BookShelfTitle={' Read'}
+              title={' Read'}
               books={books.filter(book => book.shelf === 'read')}
               updateShelf={updateShelf}
             />
